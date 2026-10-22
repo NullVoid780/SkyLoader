@@ -167,7 +167,7 @@ PluginImportAction importAndRegisterPlugin(HWND owner, const std::wstring& sourc
         !DeleteFileW(registered.path.c_str()))
       staleFileLeft = true;
   }
-  if (!replacedEntry) updatedPaths.push_back({importedPath, true});
+  if (!replacedEntry) updatedPaths.push_back({importedPath, gAutoLoadMods});
   gPlugins = std::move(updatedPaths);
 
   if (!replacing) {

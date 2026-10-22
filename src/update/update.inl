@@ -1,7 +1,10 @@
 
 void setStatus(const std::wstring& text) {
-  if (gStatus) {
-    SetWindowTextW(gStatus, text.c_str());
+  gStatusText = text;
+  gStatusTick = GetTickCount64();
+  if (gMainWindow) {
+    SetTimer(gMainWindow, kStatusTimer, 9000, nullptr);
+    InvalidateRect(gMainWindow, nullptr, FALSE);
   }
 }
 

@@ -5,7 +5,7 @@ dist/*.log
 dist/*.res
 dist/*-vulkan-layer.json
 dist/installer/
-
+dist/link.map
 # Local machine configuration
 SkyLoader.ini
 dist/SkyLoader.ini

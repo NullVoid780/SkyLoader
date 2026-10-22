@@ -8,7 +8,7 @@ OVERLAY_DIR := libraries/SkyOverlay
 CXX := g++
 WINDRES := windres
 CXXFLAGS := -std=c++17 -O2 -Wall -Wextra -municode
-LDFLAGS := -mwindows -static -static-libgcc -static-libstdc++ -lcomctl32 -lshell32 -lgdi32 -luxtheme -ladvapi32 -lversion -lwinhttp
+LDFLAGS := -mwindows -static -static-libgcc -static-libstdc++ -lcomctl32 -lshell32 -lgdi32 -lgdiplus -ldwmapi -luxtheme -ladvapi32 -lversion -lwinhttp -lole32
 
 .PHONY: all clean bootstrap overlay
 
